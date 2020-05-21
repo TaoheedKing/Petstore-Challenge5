@@ -7,7 +7,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
             crossorigin="anonymous"></script>
-    <title>Title</title>
+    <title>Pet Store - Cats</title>
 </head>
 <body>
 <ul class="nav">
@@ -27,7 +27,7 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-3">Cats</h1>
-        <form action="#" th:action="@{/cats}" th:object="${Cats}" method="post">
+        <form action="#" th:action="@{/dogs}" th:object="${Dogs}" method="post">
             <div class="form-group">
                 <label for="formGroupExampleInput">Name:</label>
                 <input class="form-control" id="formGroupExampleInput" placeholder="Enter name" type="text" th:field="*{name}"/>
@@ -49,21 +49,24 @@
 
             <div>
                 <label for="formGroupExampleInput">Pet Type:</label>
-                <input class="form-control" id="formGroupExampleInput4" placeholder="Enter Either Dog or Cat" type="text" th:field="*{petType}"/> <br/>
-            </div>
+                <select class="custom-select">
+                    <option selected="">Open this select menu</option>
+                    <option value="1">Dog</option>
+                    <option value="2">Cat</option>
+                </select>
+            </div><br/>
 
             <div>
                 <label for="formGroupExampleInput">Breed:</label>
                 <select class="custom-select">
                     <option selected="">Select Breed</option>
-                    <option value="1">Alaskan Husky</option>
-                    <option value="2">Boxer</option>
-                    <option value="3">Chihuahua</option>
-                    <option value="4">Golden Retriever</option>
-                    <option value="5">Maltese</option>
-                    <option value="6">Poodle</option>
-                    <option value="7">Shar Pei</option>
-                    <option value="8">Yorkshire Terrier</option>
+                    <option value="1">Abyssinian</option>
+                    <option value="2">Asian Semi-longhair</option>
+                    <option value="3">Birman</option>
+                    <option value="4">Bombay</option>
+                    <option value="5">Korat</option>
+                    <option value="6">Russian Blue</option>
+                    <option value="7">Sphinx</option>
                 </select>
             </div> <br/>
 
@@ -73,4 +76,3 @@
 </div>
 </body>
 </html>
-
