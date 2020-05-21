@@ -22,7 +22,7 @@ public class HomeController {
         }
         ArrayList<Customer> cust = new ArrayList<>();
         cust.add(customer);
-        return "dogs";
+        return "confirm";
     }
     @GetMapping("/dogs")
     public String loadDogs(Model model){
@@ -36,7 +36,7 @@ public class HomeController {
         }
         ArrayList<Dogs> cust = new ArrayList<>();
         cust.add(dogs);
-        return "cats";
+        return "confirm";
     }
     @GetMapping("/cats")
     public String loadCats(Model model){
@@ -50,6 +50,6 @@ public class HomeController {
         }
         ArrayList<Cats> cust = new ArrayList<>();
         cust.add(cats);
-        return "petstore";
+        return "confirm";
     }
 }
